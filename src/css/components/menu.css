@@ -49,20 +49,28 @@ On ajoute les propriétés "visibility: hidden" et "opacity: 0" pour masquer le 
 .menu-btn__bar::after {
   content: '';
   background: var(--gray-white);
-  height: 2px;
-  width: 100%;
+  height: 3px;
+  width: 120%;
   position: absolute;
   left: 0;
   z-index: 10;
   transition: all .4s ease-in-out;
+  border-radius: 5px;
 }
 
 .menu-btn__bar::before {
-  top: -10px;
+  width: 60%;
+  left: 15px;
+  top:-10px;
+  border-radius: 5px;
 }
 
 .menu-btn__bar::after {
+  width: 60%;
+  right:10px;
+
   top: 10px;
+  border-radius: 5px;
 }
 
 /* Technique pour transformer les 3 barres du bouton de menu en croix
@@ -76,11 +84,9 @@ Ne pas oublier d'ajouter une transition plus haut pour l'animation */
 .menu-btn--open .menu-btn__bar::before,
 .menu-btn--open .menu-btn__bar::after {
   transform: rotate(90deg);
-  top: 0;
+  left: 0px;
+  top:0px;
+  width: 100%;
+  
 }
 
-.header--atTop .menu-btn:not(.menu-btn--open) .menu-btn__bar,
-.header--atTop .menu-btn:not(.menu-btn--open) .menu-btn__bar::before,
-.header--atTop .menu-btn:not(.menu-btn--open) .menu-btn__bar::after {
-  background-color: var(--gray-black);
-}
