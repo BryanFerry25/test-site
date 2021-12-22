@@ -1,166 +1,222 @@
 <!DOCTYPE html>
 <html lang="fr" x-data="{ menuIsOpen: false }" :class="menuIsOpen && 'noscroll'">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="site Féminisme & Humanité">
+    <meta name="description" content="Site du Conservatoire de Belfort">
 
-    <title>Féminisme & Humanité</title>
-
+    <title>Conservatoire Henri Dutilleux</title>
+    <!-- Déclaration de la feuille de style -->
     <link rel="stylesheet" href="src/css/style.css">
+    <!-- Chargement de la librairie Alpine JS -->
     <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
-</head>
-<body>
+  </head>
 
-  <header class="header">
+  <body x-data="{ atTop: true }">
 
-    <div class="header__start">
-      <div class="header__object">
-        <img src="public/icones/eclair.webp" alt="eclair">
-        <img src="public/icones/logo.svg" alt="logo">
-        <img class="header__fond" src="public/icones/accueil_design_entete.webp" alt="design en tete">
+    <!-- En-tête de la page -->
+    <header class="header container" 
+            @scroll.window="atTop = ( window.scrollY > 100 ? false : true )"
+            :class="{ 'header--atTop' : !atTop }">
 
+      <div class="header__start">
+        <a href="/">
+          <img class="header__logo" src="assets/icones/logo.svg" alt="logo du conservatoire Henri Dutilleux">
+        </a>
+      </div>
+
+      <div class="header__end" x-data="{ searchIsOpen: false }">
+
+        <button class="header__search" @pointerdown="searchIsOpen = true">
+          <img src="assets/icones/icon_search.svg" alt="icone de recherche">
+        </button>
+
+        <!-- Formulaire de recherche -->
+        <div class="search-form" :class="searchIsOpen && 'search-form--open'">
+          <button class="search-form__close" @pointerdown="searchIsOpen = false">
+            <img src="assets/icones/icon_cross.svg" alt="icone croix">
+          </button>
+
+          <form class="search-form__form" action="#">
+            <label class="sr-only" for="search-form">Rechercher</label>
+            <input class="search-form__input" type="search" id="search-form" placeholder="Recherche…" value="">
+            <button class="search-form__submit">
+              <img src="assets/icones/icon_search.svg" alt="icone loupe">
+            </button>
+          </form>
+
+        </div>
+        <!-- Fin du formulaire de recherche -->
         
-        
-            
-      <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
-        @pointerdown="menuIsOpen = !menuIsOpen" 
-        :class="menuIsOpen && 'menu-btn--open'">
-      <span class="menu-btn__bar"></span>
-    </button>
-    
+        <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+                @pointerdown="menuIsOpen = !menuIsOpen" 
+                :class="menuIsOpen && 'menu-btn--open'">
+          <span class="menu-btn__bar"></span>
+        </button>
+
+        <!-- Menu principal -->
+        <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+          <ul class="menu__list list-unstyled">
+            <li class="menu__item"><a class="menu__link" href="conservatoire.html">Le conservatoire</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Enseignements</a></li>
+            <li class="menu__item"><a class="menu__link" href="agenda.html">Agenda</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+            <li class="menu__item menu__item--btn"><a class="menu__link" href="inscription.html">S'inscrire</a></li>
+          </ul>
+        </nav>
+        <!-- Fin du menu principal -->
 
       </div>
-      
-    </div> 
-    
-      <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
-     
-        <ul class="menu__list list-unstyled">
-          <li class="menu__item">
-            <a class="menu__link" href="article1.html">La puissance féminine</a></li>
-          <li class="menu__item">
-            <a class="menu__link" href="article2.html">Rebecca Amsellem, une lutte acharnée</a></li>
-          <li class="menu__item">
-            <a class="menu__link" href="article3.html">À quoi servent les femmes ?</a></li>
-          <li class="menu__item">
-            <a class="menu__link" href="galerie.html">Galerie</a></li>
-          <li class="menu__item">
-            <a class="menu__link" href="glossaire.html">Glossaire</a></li>
-            <hr class="menu__separaison1">
-          <li class="menu__item">
-            <a class="menu__link" href="a_propos.html">À Propos</a></li>
-            <hr class="menu__separaison2">
-          <li class="menu__item">
-            <a class="menu__link" href="#">Anglais</a></li>
-        </ul>
-      </nav>
-      
-    
         
     </header>
-</header>
-      <section class="accueil">
-        <div class="accueil__afterstart">
-          
-          <h1 class="accueil__tagline">Vous connaissez l'égalité? Elles non plus...</h1>
-          <img class="accueil__imgintro" src="public/images/accueil_intro.webp" alt="femme dans une cuisine">
+    <!-- Fin de l'en-tête de page -->
+
+    <!-- Contenu principal de la page -->
+    <main>
+
+      <div class="hero">
+
+        <div class="hero__header container">
+          <h1 class="hero__title">CRD Henri Dutilleux</h1>
+          <h2 class="hero__sub-title">Conservatoire à rayonnement départemental du grand Belfort</h2>
+          <div class="hero__img duotone"><img src="assets/img/page-home.webp" alt="violoncelles"></div>
         </div>
-
-          <div class="accueil__intro">
-            <h2 class="accueil__pourcentage">16,4%</h2>
-            <p class="accueil__explicpourc">C’est l’écart de salaire entre les hommes et les femmes en 2013 dans l’Union européennes.</p>
-          
-
-          
-              <p class="accueil__accroche">Des inégalités comme celle-ci ne sont malheureusement pas dévoilées en grand public... On vous invite donc à découvrir les évènements marquant du féminisme à travers 3 de nos articles.</p>
-              <p class="accueil__bonnevisite">Bonne visite !</p>
-            <div class="accueil__videoytb" >
-                <a href="https://youtu.be/BfW72FjVC6k">
-                  <img class="accueil__visuel" src="public/images/visuel_video.webp" alt="visuel de la vidéo a quoi servent les femmes">
-                </a>
-            </div>
-              
-              
-          </div>
-      </section>
-      <section  class="introart">
-        <img class="introart__separaisong" src="public/icones/barre_accueil_gauche.webp" alt="design de barre pour séparer les articles">
-
-        <div class="introart__article1">
-          <h2 class="introart__titre1">La puissance féminine</h2>
-          <img class="introart__img1" src="public/images/accueil_article1.webp" alt="article 1 accueil">
-          <p class="introart__tweet1">Si on vous dit féminisme pensez-vous à la guerre ? Pourtant elle a inversé les rôles des hommes avec les femmes en rétablissant l’égalité.</p>
-          <a href="article1.html"><img  class="introart__suite"src="public/icones/lire_la_suite.webp" alt="bouton avec marqué lire la suite"></a>
-        </div>
-
-        <img class="introart__separaisond" src="public/icones/barre_accueil_droite.webp" alt="design de barre pour séparer les articles">
-
-        <div class="introart__article2">
-          <h2 class="introart__titre2">Rebecca Amsellem, une lutte acharnée</h2>
-          <img class="introart__img2" src="public/images/accueil_article2.webp" alt="article 2 accueil">
-          <p class="introart__tweet2">Vous vous doutez sûrement des inégalités salariales, mais saviez-vous qu’elles représentent 2 mois de travail gratuit par an pour une femme.</p>
-          <a href="article2.html"><img  class="introart__suite"src="public/icones/lire_la_suite.webp" alt="bouton avec marqué lire la suite"></a>
-        </div>
-
-        <img  class="introart__separaisong"src="public/icones/barre_accueil_gauche.webp" alt="design de barre pour séparer les articles">
-
-        <div class="introart__article3">
-          <h2 class="introart__titre3"> À quoi servent les femmes ?</h2>
-          <img  class="introart__img3"src="public/images/accueil_article3.webp" alt="article 3 accueil">
-          <p class="introart__tweet3">La femme n’est bonne qu’à faire la cuisine et le ménage, elle ne sert qu’à ça . Cette phrase était malheureusement ordinaire en 1960.</p>
-          <a href="article3.html"><img  class="introart__suite"src="public/icones/lire_la_suite.webp" alt="bouton avec marqué lire la suite"></a>
+    
+        <div class="hero__chapo chapo container">
+          <h3 class="chapo__title">
+            <a class="chapo__link" href="#"><img src="assets/icones/icon_musique.svg" alt="Icone musique"> Musique</a>
+          </h3>
+          <h3 class="chapo__title">
+            <a class="chapo__link" href="#"><img src="assets/icones/icon_theatre.svg" alt="Icone theatre"> Théâtre</a>
+          </h3>
+          <h3 class="chapo__title">
+            <a class="chapo__link" href="#"><img src="assets/icones/icon_danse.svg" alt="Icone danse"> Danse</a>
+          </h3>
         </div>
         
-
-
-      </section>
-      <footer class="footer">
-        <img class="footer__design" src="public/icones/design_piedpage.svg" alt="">
-        <div class="footer__all">
-         
-          <div class="footer__info">
-            
-            <p class="footer__name">Bryan Ferry A2 </p>
-            
-            
-              
-          
-          
-              <a class="footer__adresse" href="mailto:bryan.ferry@edu.univ-fcomte.fr">
-                <img class="footer__logomail" src="public/icones/logo_mail.svg" alt="Logo mailto">
-              </a>
-              
-              
-            <div class="footer__contact">
-            <p class="footer__renseignement">Besoin de renseignement ? </p>
-  
-            <div class="footer__besoininfo">
-              <a class="footer__buttoncontact" href="contact.html">CONTACT</a>
-              <a class="footer__apropos" href="a_propos.html">À PROPOS</a>
-            </div>
-            
-          </div>
-          <hr class="footer__separaison">
-            
-          </div>
-          
-          <div class="footer__mmi">
-            <img class="footer__logommi" src="public/icones/logo_mmi.svg" alt="logo du MMI de Montbéliard">
-  
-            <p class="footer__mmiprojet">Projet réalisé dans le cadre d’un exercice <br>
-           pédagogique au département </p>
-        
-            <a class="footer__lienmmi" href="http://mmimontbeliard.com/">MMi de Montbéliard</a>
-            
-          </div>
-          <br> <br>
-        </div>
-  
-      </footer>
+      </div>
       
-    
-    
-</body>
+      <section class="presentation container">
+        
+        <img src="assets/img/crd-int-01.webp" alt="Salle de musique du conservatoire">
+        
+        <header class="presentation__header">
+          <h2 class="presentation__title">Découvrez le Conservatoire, <strong>ses enseignements</strong>, ses équipes dans un nouveau lieu dédié à la culture artistique.</h2>
+          <a class="presentation__link btn" href="conservatoire.html">
+            <img class="btn__icon" src="assets/icones/icon_arrowline.svg" alt="icone de fleche"> Plus d'info
+          </a>
+        </header>
+
+        <div class="presentation__stats">
+          <p class="presentation__stat stat">
+            <span class="stat__chiffre">9</span>
+            <span class="stat__text">sites</span>
+          </p>
+          <p class="presentation__stat stat">
+            <span class="stat__chiffre">84</span>
+            <span class="stat__text">enseignants</span>
+          </p>
+          <p class="presentation__stat stat">
+            <span class="stat__chiffre">1500</span>
+            <span class="stat__text">élèves</span>
+          </p>
+          <p class="presentation__stat stat">
+            <span class="stat__chiffre">50</span>
+            <span class="stat__text">disciplines</span>
+          </p>
+        </div>
+        
+      </section>
+
+      <section class="section container"
+               x-data="{ 'cards' : async ()=> {
+                 const resp = await fetch('/src/data/agenda.json');
+                 return await resp.json();
+               }}">
+
+        <header class="section__header">
+          <h2 class="section__title">Agenda</h2>
+          <p class="section__intro">Lieu de création artistique, le conservatoire propose régulièrement des actions culturelles ouvertes à tous.</p>
+        </header>
+
+        <a class="section__link btn" href="agenda.html">
+          <img src="assets/icones/icon_arrowline.svg" alt="icone de flèche">  Tous les évènements
+        </a>
+
+        <template x-for="card in cards" :key="card.id">
+
+          <article class="section__card card">
+            <div class="card__img duotone">
+              <img :src="card.picture" :alt="card.picture_desc">
+            </div>
+            <h3 class="card__title">
+              <a class="card__title-link" :href="card.link" x-text="card.title"></a>
+            </h3>
+            <div class="card__caption">
+              <p class="card__date" x-text="card.date"></p>
+              <p class="card__excerpt" x-text="card.excerpt"></p>
+              <a class="card__link morelink" :href="card.link">Plus d'info</a>
+            </div>
+          </article>
+
+        </template>
+
+      </section>
+
+      <section class="section section--dark container">
+
+        <header class="section__header">
+          <h2 class="section__title">Inscriptions</h2>
+          <p class="section__intro">Vous êtes désireux d'entrer au conservatoire ? Vous trouverez ici toutes les informations sur les les modalités d'inscriptions.</p>
+        </header>
+
+        <a class="section__link btn btn--outlined" href="inscription.html">
+          <img src="assets/icones/icon_arrowline.svg" alt="icone de flèche"> S'inscrire
+        </a>
+        <div  class="section__img duotone"><img src="assets/img/section-inscription.webp" alt="facade Est du conservatoire"></div>
+
+      </section>
+
+    </main>
+    <!-- Fin du contenu principal -->
+
+    <!-- Pied de page -->
+    <footer class="footer">
+
+      <img class="footer__logo" src="assets/icones/icon_logoFooter.svg" alt="Logo du Conservatoire de Belfort">
+  
+      <nav class="footer__menu">
+        <h3 class="footer__title">Menu</h3>
+        <ul class="list-unstyled">
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="#">Archives</a></li>
+          <li><a href="#">Contact et accès</a></li>
+        </ul>
+      </nav>
+  
+      <div class="footer__contact">
+        <h3 class="footer__title">Contact</h3>
+        <address class="footer__address">1 rue Paul Koepfler<br>90000 Belfort<br>
+          <a href="tel:0384542727">03 84 54 27 27</a><br>
+          <a href="mailto:conservatoire@agglo-belfort.fr">conservatoire@agglo-belfort.fr</a>
+        </address>
+      </div>
+  
+      <div class="footer__social">
+        <h3 class="footer__title">Nous suivre</h3>
+        <ul class="footer__list list-unstyled">
+          <li><a href="https://facebook.com" aria-label="facebook"><img src="assets/icones/icon_facebook.svg" alt="icone facebook"></a></li>
+          <li><a href="https://instagram.com" aria-label="instagram"><img src="assets/icones/icon_instagram.svg" alt="icone instagram"></a></li>
+          <li><a href="https://twitter.com" aria-label="twitter"><img src="assets/icones/icon_twitter.svg" alt="icone twitter"></a></li>
+          <li><a href="https://youtube.com" aria-label="youtube"><img src="assets/icones/icon_youtube.svg" alt="icone youtube"></a></li>
+        </ul>
+      </div>
+  
+      <img class="footer__gb" src="assets/icones/logo-grand-belfort.svg" alt="Logo du Grand Belfort">
+  
+    </footer>
+    <!-- Fin du pied de page -->
+
+  </body>
 </html>

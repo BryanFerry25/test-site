@@ -1,5 +1,6 @@
-
-
+/* Pour construire le menu en mobile : 
+On construit le menu tel qu'il sera une fois ouvert.
+On ajoute les propriétés "visibility: hidden" et "opacity: 0" pour masquer le menu. */
 .menu {
   visibility: hidden;
   opacity: 0;
@@ -9,131 +10,77 @@
   position: fixed;
   top: 0; bottom: 0;
   left: 0; right : 0;
-  background-color: violet;
-  font-size: 16px;
-  
+  background-color: var(--brand-violet);
+  font-size: var(--text-xl);
+  letter-spacing: var(--letter-spacing);
   transition: all .4s ease-in-out;
-  
 }
-
-
-.menu__entete {
-  
- 
-  margin-top: 0;
-  z-index: -4;
-  margin-bottom: 88vh;
-  position: absolute;
-}
-
-.menu__logo{
-  height: 100px;
-  
-  position: absolute;
-  z-index: -4;
-  margin-bottom: 85vh;
-  
-}
-
-
+/* On se sert de Javascript pour ajouter une classe sur le menu lorsqu'on clique sur le bouton de menu pour le faire apparaître */
 .menu--open {
-    visibility: visible;
-    opacity: 1;
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Mise en forme des éléments du menu */
+.menu__list {
+  margin-top: 25vh;
+  margin-left: 15vw;
+}
+
+.menu__item {
+  margin-top: 15%;
+}
+
+.menu__link {
+  color: var(--gray-white);
+  text-decoration: none;
 }
 
 
-.menu__item{
-    
-    text-align: center;
-    font-size: 1.02rem;
-    margin-top: 13%;
-}
-
-.menu__list{
-    margin: 25vh 8vh 9vh 15vw;
-
-}
-nav{
-    
-    
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
- 
-}
-
-
+/* Mise en forme du bouton de menu "Hamburger" */
 .menu-btn {
-    position: relative;
-    z-index: 5;
-    width: 40px;  
-    
-  }
-  
-  .menu-btn__bar,
-  .menu-btn__bar::before,
-  .menu-btn__bar::after {
-    
-    content: '';
-    background: green;
-    height: 4px;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    z-index: 10;
-    border-radius: 4px;
-    transition: all .4s ease-in-out;
-    
-    
-  }
-  
-  .menu-btn__bar::before {
-    
-    width: 60%; 
-    left:15px;
-    top: -10px;
-    border-radius: 6px; 
-  }
-  
-  .menu-btn__bar::after {
-    width: 60%;
-    right:10px;
-    top: 10px;
-    border-radius: 6px;
-  }
-  
-  /* Technique pour transformer les 3 barres du bouton de menu en croix
-  Ne pas oublier d'ajouter une transition plus haut pour l'animation */
-  .menu-btn--open .menu-btn__bar,
-  .menu-btn--open .menu-btn__bar::before,
-  .menu-btn--open .menu-btn__bar::after {
-
-    transform: rotate(135deg);
-  }
-  
-  .menu-btn--open .menu-btn__bar::before,
-  .menu-btn--open .menu-btn__bar::after {
-    transform: rotate(90deg);
-    left:0px;
-    top: 0;
-    width:100%
-  }
-
-  .menu__separaison1{
-    height: 1px;
-    color:var(--foncé-marron2);
-    width:60%;
-    background-color: var(--foncé-marron2);
-    border-radius: 5px;
-  }
-
-.menu__separaison2{
-  height: 1px;
-  color:var(--foncé-marron2);
-  width:95%;
-  background-color: var(--foncé-marron2);
-  border-radius: 5px;
+  position: relative;
+  z-index: 3;
+  width: 30px;  
 }
-  
-  
+
+.menu-btn__bar,
+.menu-btn__bar::before,
+.menu-btn__bar::after {
+  content: '';
+  background: var(--gray-white);
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  z-index: 10;
+  transition: all .4s ease-in-out;
+}
+
+.menu-btn__bar::before {
+  top: -10px;
+}
+
+.menu-btn__bar::after {
+  top: 10px;
+}
+
+/* Technique pour transformer les 3 barres du bouton de menu en croix
+Ne pas oublier d'ajouter une transition plus haut pour l'animation */
+.menu-btn--open .menu-btn__bar,
+.menu-btn--open .menu-btn__bar::before,
+.menu-btn--open .menu-btn__bar::after {
+  transform: rotate(135deg);
+}
+
+.menu-btn--open .menu-btn__bar::before,
+.menu-btn--open .menu-btn__bar::after {
+  transform: rotate(90deg);
+  top: 0;
+}
+
+.header--atTop .menu-btn:not(.menu-btn--open) .menu-btn__bar,
+.header--atTop .menu-btn:not(.menu-btn--open) .menu-btn__bar::before,
+.header--atTop .menu-btn:not(.menu-btn--open) .menu-btn__bar::after {
+  background-color: var(--gray-black);
+}
