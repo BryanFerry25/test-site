@@ -6,17 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Site du Conservatoire de Belfort">
 
-    <title>Conservatoire Henri Dutilleux</title>
-    <!-- Déclaration de la feuille de style -->
+    <title>Conservatoire Henri Dutilleux — Concert d'ouverture</title>
+    
     <link rel="stylesheet" href="src/css/style.css">
-    <!-- Chargement de la librairie Alpine JS -->
     <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
   </head>
-
   <body x-data="{ atTop: true }">
-
-    <!-- En-tête de la page -->
-    <header class="header container" 
+    <header class="header" 
             @scroll.window="atTop = ( window.scrollY > 100 ? false : true )"
             :class="{ 'header--atTop' : !atTop }">
 
@@ -27,12 +23,10 @@
       </div>
 
       <div class="header__end" x-data="{ searchIsOpen: false }">
-
         <button class="header__search" @pointerdown="searchIsOpen = true">
           <img src="assets/icones/icon_search.svg" alt="icone de recherche">
         </button>
 
-        <!-- Formulaire de recherche -->
         <div class="search-form" :class="searchIsOpen && 'search-form--open'">
           <button class="search-form__close" @pointerdown="searchIsOpen = false">
             <img src="assets/icones/icon_cross.svg" alt="icone croix">
@@ -47,15 +41,12 @@
           </form>
 
         </div>
-        <!-- Fin du formulaire de recherche -->
-        
+
         <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
                 @pointerdown="menuIsOpen = !menuIsOpen" 
                 :class="menuIsOpen && 'menu-btn--open'">
           <span class="menu-btn__bar"></span>
         </button>
-
-        <!-- Menu principal -->
         <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
           <ul class="menu__list list-unstyled">
             <li class="menu__item"><a class="menu__link" href="conservatoire.html">Le conservatoire</a></li>
@@ -65,88 +56,62 @@
             <li class="menu__item menu__item--btn"><a class="menu__link" href="inscription.html">S'inscrire</a></li>
           </ul>
         </nav>
-        <!-- Fin du menu principal -->
-
       </div>
         
     </header>
-    <!-- Fin de l'en-tête de page -->
 
-    <!-- Contenu principal de la page -->
     <main>
+      <div class="duotone"><img src="assets/img/img-article.webp" alt="crd"></div>
 
-      <div class="hero">
+      <header class="container">
+        <h1>Concert d'ouverture</h1>
+        <ul class="infos list-unstyled">
+          <li class="infos__row">
+            <span class="infos__label">Date</span>
+            <span class="infos__value">Jeudi 24 mars à 20h30</span>
+          </li>
+          <li class="infos__row">
+            <span class="infos__label">Lieux</span>
+            <span class="infos__value"><a class="infos__link" href="#">Conservatoire Henri Dutilleux</a></span>
+          </li>
+          <li class="infos__row">
+            <span class="infos__label">Catégorie</span>
+            <span class="infos__value"><a class="infos__link" href="#">Musique</a></span>
+          </li>
+        </ul>
+      </header>
 
-        <div class="hero__header container">
-          <h1 class="hero__title">CRD Henri Dutilleux</h1>
-          <h2 class="hero__sub-title">Conservatoire à rayonnement départemental du grand Belfort</h2>
-          <div class="hero__img duotone"><img src="assets/img/page-home.webp" alt="violoncelles"></div>
+      <div class="container">
+
+        <p>Dans le cadre du Festival du film et forum international sur les droits humains (FIFDH) et en écho à Die Entführung aus dem Serail, Payot Genève organise une rencontre exceptionnelle avec l’écrivain et journaliste turque dissidente Aslı Erdoğan.</p>
+        <p>Dans le cadre du Festival du film et forum international sur les droits humains (FIFDH) et en écho à Die Entführung aus dem Serail, Payot Genève organise une rencontre exceptionnelle avec l’écrivain et journaliste turque dissidente Aslı Erdoğan.</p>
+        <p>Physicienne de formation, et à ce titre familière de Genève pour avoir travaillé au CERN, Aslı Erdoğan a milité pour la défense de ses pairs – à travers le « Comité des écrivains emprisonnés » du Pen Club International – de la minorité kurde (tout en se distanciant clairement des violences du PKK). Active dans la dénonciation des exactions du régime actuellement en place, elle est arrêtée en août 2016 à la suite de ce qu’Ankara considère comme un coup d’État manqué, et n’a dû finalement sa libération qu’à la pression internationale en sa faveur. À travers ses livres, dont Le silence même n’est plus à toi et Le bâtiment de pierre, elle analyse aussi bien les raisons politiques que sociales ou culturelles qui expliquent la lente mais opiniâtre dérive de la Turquie actuelle.</p>
+        <p>La discussion avec Aslı Erdoğan sera animée par Isabelle Gattiker, directrice générale du FIFDH, et suivie d’une séance de signature.</p>
+        <p>Dans le cadre du Festival du film et forum international sur les droits humains (FIFDH) et en écho à Die Entführung aus dem Serail, Payot Genève organise une rencontre exceptionnelle avec l’écrivain et journaliste turque dissidente Aslı Erdoğan.</p>
+        <div class="carousel">
+          <div class="carousel__item"><img src="assets/img/agenda-01.webp" alt="musique"></div>
+          <div class="carousel__item"><img src="assets/img/agenda-02.webp" alt="musique"></div>
+          <div class="carousel__item"><img src="assets/img/agenda-03.webp" alt="musique"></div>
+          <div class="carousel__item"><img src="assets/img/agenda-04.webp" alt="musique"></div>
+          <div class="carousel__item"><img src="assets/img/agenda-05.webp" alt="musique"></div>
         </div>
-    
-        <div class="hero__chapo chapo container">
-          <h3 class="chapo__title">
-            <a class="chapo__link" href="#"><img src="assets/icones/icon_musique.svg" alt="Icone musique"> Musique</a>
-          </h3>
-          <h3 class="chapo__title">
-            <a class="chapo__link" href="#"><img src="assets/icones/icon_theatre.svg" alt="Icone theatre"> Théâtre</a>
-          </h3>
-          <h3 class="chapo__title">
-            <a class="chapo__link" href="#"><img src="assets/icones/icon_danse.svg" alt="Icone danse"> Danse</a>
-          </h3>
-        </div>
-        
-      </div>
+        <p>Physicienne de formation, et à ce titre familière de Genève pour avoir travaillé au CERN, Aslı Erdoğan a milité pour la défense de ses pairs – à travers le « Comité des écrivains emprisonnés » du Pen Club International – de la minorité kurde (tout en se distanciant clairement des violences du PKK). Active dans la dénonciation des exactions du régime actuellement en place, elle est arrêtée en août 2016 à la suite de ce qu’Ankara considère comme un coup d’État manqué, et n’a dû finalement sa libération qu’à la pression internationale en sa faveur. À travers ses livres, dont Le silence même n’est plus à toi et Le bâtiment de pierre, elle analyse aussi bien les raisons politiques que sociales ou culturelles qui expliquent la lente mais opiniâtre dérive de la Turquie actuelle.</p>
+        <p>La discussion avec Aslı Erdoğan sera animée par Isabelle Gattiker, directrice générale du FIFDH, et suivie d’une séance de signature.</p>
       
-      <section class="presentation container">
-        
-        <img src="assets/img/crd-int-01.webp" alt="Salle de musique du conservatoire">
-        
-        <header class="presentation__header">
-          <h2 class="presentation__title">Découvrez le Conservatoire, <strong>ses enseignements</strong>, ses équipes dans un nouveau lieu dédié à la culture artistique.</h2>
-          <a class="presentation__link btn" href="conservatoire.html">
-            <img class="btn__icon" src="assets/icones/icon_arrowline.svg" alt="icone de fleche"> Plus d'info
-          </a>
+      </div>
+
+      <aside class="container"
+             x-data="{ 'cards' : async ()=> {
+               const resp = await fetch('/src/data/agenda.json');
+               return await resp.json();
+             }}">
+        <header>
+          <h2>Vous aimerez également</h2>
         </header>
-
-        <div class="presentation__stats">
-          <p class="presentation__stat stat">
-            <span class="stat__chiffre">9</span>
-            <span class="stat__text">sites</span>
-          </p>
-          <p class="presentation__stat stat">
-            <span class="stat__chiffre">84</span>
-            <span class="stat__text">enseignants</span>
-          </p>
-          <p class="presentation__stat stat">
-            <span class="stat__chiffre">1500</span>
-            <span class="stat__text">élèves</span>
-          </p>
-          <p class="presentation__stat stat">
-            <span class="stat__chiffre">50</span>
-            <span class="stat__text">disciplines</span>
-          </p>
-        </div>
-        
-      </section>
-
-      <section class="section container"
-               x-data="{ 'cards' : async ()=> {
-                 const resp = await fetch('/src/data/agenda.json');
-                 return await resp.json();
-               }}">
-
-        <header class="section__header">
-          <h2 class="section__title">Agenda</h2>
-          <p class="section__intro">Lieu de création artistique, le conservatoire propose régulièrement des actions culturelles ouvertes à tous.</p>
-        </header>
-
-        <a class="section__link btn" href="agenda.html">
-          <img src="assets/icones/icon_arrowline.svg" alt="icone de flèche">  Tous les évènements
-        </a>
 
         <template x-for="card in cards" :key="card.id">
 
-          <article class="section__card card">
+          <article class="card">
             <div class="card__img duotone">
               <img :src="card.picture" :alt="card.picture_desc">
             </div>
@@ -162,26 +127,9 @@
 
         </template>
 
-      </section>
-
-      <section class="section section--dark container">
-
-        <header class="section__header">
-          <h2 class="section__title">Inscriptions</h2>
-          <p class="section__intro">Vous êtes désireux d'entrer au conservatoire ? Vous trouverez ici toutes les informations sur les les modalités d'inscriptions.</p>
-        </header>
-
-        <a class="section__link btn btn--outlined" href="inscription.html">
-          <img src="assets/icones/icon_arrowline.svg" alt="icone de flèche"> S'inscrire
-        </a>
-        <div  class="section__img duotone"><img src="assets/img/section-inscription.webp" alt="facade Est du conservatoire"></div>
-
-      </section>
-
+      </aside>
     </main>
-    <!-- Fin du contenu principal -->
 
-    <!-- Pied de page -->
     <footer class="footer">
 
       <img class="footer__logo" src="assets/icones/icon_logoFooter.svg" alt="Logo du Conservatoire de Belfort">
@@ -216,7 +164,6 @@
       <img class="footer__gb" src="assets/icones/logo-grand-belfort.svg" alt="Logo du Grand Belfort">
   
     </footer>
-    <!-- Fin du pied de page -->
 
   </body>
 </html>
