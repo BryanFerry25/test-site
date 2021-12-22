@@ -1,0 +1,52 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-zenold);
+  font-size: var(--text-article);
+  line-height: 1.6;
+  background-color: var(--base-fond);
+  color: var(--foncé-marron2);
+  
+}
+
+h1, h2 {
+  font-family: var(--font-cinzel);
+  font-weight: normal;
+  line-height: 1.1;
+  font-size: var(--titre-article);
+  color: var(--foncé-marron2)
+}
+
+a{
+  text-decoration:none;
+  color:var(--foncé-marron2)
+
+}
+
+button {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+
+
+.list-unstyled {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.noscroll,
+.noscroll body {
+  overflow: hidden;
+}
+

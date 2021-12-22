@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr" x-data="{ menuIsOpen: false }" :class="menuIsOpen && 'noscroll'">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="site Féminisme & Humanité">
+
+    <title>Féminisme & Humanité</title>
+
+    <link rel="stylesheet" href="src/css/style.css">
+    <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+</head>
+<body>
+    <header class="header"
+    @scroll.window="atTop = ( window.scrollY > 100 ? false : true )"
+            :class="{ 'header--atTop' : !atTop }">
+
+      <div class="header__start">
+        <div class="header__object2">
+          <img src="public/icones/fleche_retour.svg" alt="retour" onclick="history.back()">
+          <a href="index.html">
+            <img src="public/icones/logo.svg" alt="logo">
+          </a>
+          <img class="header__fond" src="public/icones/accueil_design_entete.webp" alt="design en tete">
+
+          
+          
+              
+        <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+          @pointerdown="menuIsOpen = !menuIsOpen" 
+          :class="menuIsOpen && 'menu-btn--open'">
+        <span class="menu-btn__bar"></span>
+      </button>
+      
+
+        </div>
+        
+      </div> 
+      
+        <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+          <img class="menu__entete" src="public/icones/accueil_design_entete.webp" alt="">
+          <img class="menu__logo" src="public/icones/logo.svg" alt="logo">
+          <ul class="menu__list list-unstyled">
+            <li class="menu__item">
+              <a class="menu__link" href="article1.html">La puissance féminine</a></li>
+            <li class="menu__item">
+              <a class="menu__link" href="article2.html">Rebecca Amsellem, une lutte acharnée</a></li>
+            <li class="menu__item">
+              <a class="menu__link" href="article3.html">À quoi servent les femmes ?</a></li>
+            <li class="menu__item">
+              <a class="menu__link" href="galerie.html">Galerie</a></li>
+            <li class="menu__item">
+              <a class="menu__link" href="glossaire.html">Glossaire</a></li>
+              <hr class="menu__separaison1">
+            <li class="menu__item">
+              <a class="menu__link" href="a_propos.html">À Propos</a></li>
+              <hr class="menu__separaison2">
+            <li class="menu__item">
+              <a class="menu__link" href="#">Anglais</a></li>
+          </ul>
+        </nav>
+        
+      
+          
+      </header>
+
+    <main class="article">
+
+        
+
+    <section>
+      <h1 class="article__title">Rebecca Amsellem une lutte acharnée</h1>
+        <img class="article__imageintro" src="public/images/article2_intro.webp" alt="rebecca Amsellem">
+        <p class="article__intro">Rebecca Amsellem propose de multiples solutions afin de rendre les salaires égaux entre hommes et femmes. D’un autre côté en se fiant aux statistiques elle constate qu’il y en a encore pour plus de 100 ans avant de ne plus avoir d’inégalité. </p>
+
+        <p class="article__intro">Les autres pays ayant réussi l’inspirent mais la France a encore du progrès à faire.</p>
+     </section>
+
+    <section>
+
+      <h2 class="article__subtitle"> Une flagrante différence </h2>
+      <p class="article__texte">Rebecca Amsellem va s’appuyer sur les écarts de salaire afin de créé son mouvement. Elle à créé un mouvement se nommant #4Novembre16h16, enfin pas vraiment car il change chaque année... Mais ce n’est pas une date choisie aléatoirement. Tout d’abord ce mouvement signifie qu’à partir du 4 novembre à 16h16 par exemple les femmes vont travailler gratuitement jusqu’à la fin de l’année.</p>
+        
+      
+      <figure>
+        <img class="article__image" src="public/images/article2_image1.webp" alt="illustration montrant que l'homme est supérieur à la femme">
+        <figcaption class="article__legende">Image qui représente que l’homme est supérieur à la femme en therme d’argent</figcaption>
+      </figure>
+
+        <p class="article__texte">En 2016 par exemple le mouvement se nommait #7novembre16h34 et les femmes étaient payées 15.1% de moins que les hommes. Ce pourcentage est donc rapporté aux jours de l’année ou l’on travaille et cela nous donne donc cette date. </p>
+
+        <p class="article__texte">Le paradoxe de ce mouvement c’est que de plus en plus de lois sont mise en place pour rendre le salaire égale entre tous mais la date ne fait qu’être de plus en plus éloignée de l’année qui suit. Le salaire est donc de moins en moins égal et le problème est donc loin d’être réglé.</p>
+             
+    </section>
+
+    <section>
+
+        <h2 class="article__subtitle"> Un pacte d’égalité </h2>
+        <p class="article__texte">Rebecca Amsellem ne va pas non seulement constater les différences mais elle va faire tout son possible pour trouver des solutions. La première solution assez fiable 
+          qu’elle propose s’appuie sur le certificat d’égalité. </p>
+        
+        <figure>
+            <img class="article__image" src="public/images/article2_image2.webp" alt="certificat d'égalité">
+            <figcaption class="article__legende">Certificat du pacte d’égalité</figcaption>
+        </figure>
+
+        <p class="article__texte">Cette idée vient tout droit de l’Islande, ce pays est très exigeant sur l’égalité des salaires. Normalement c’est aux femmes de démontrer que leurs salaires sont inférieurs à un homme dans l’entreprise par exemple, mais cette méthode ne mène à rien car il faut faire beaucoup de démarches .  Alors qu’en Islande c’est aux entreprises de prouver très précisément que s’il y a un écart de salaire ce n’est pas lié au sexe, sinon l’entreprise ne sera pas en règle avec le certificat d’égalité.</p>
+      
+        <p class="article__texte">On vient d’énoncer une des
+          propositions de Rebecca Amsellem
+          mais elle propose une multitude de normes à mettre en place pour avoir des salaires égaux entre tous.</p>
+
+        <p class="article__texte">
+          Elle veut par exemple mettre davantage en valeur les salaires des métiers ou les hommes sont le moins présent. Avec par exemple les femmes de ménage, les métiers liés aux soins etc..
+        </p>
+
+        <figure>
+          <img class="article__image" src="public/images/article2_image3.webp" alt="image montrant que l'homme est supérieur à la femme au niveau du salaire">
+          <figcaption class="article__legende">Image représentant qu’en faisant la même chose l’homme gagnera tout l’argent comparé à la femme</figcaption>
+      </figure>
+      </section>
+
+      <section>
+        <h2 class="article__subtitle"> Un éternel combat</h2>
+        
+        <p class="article__texte"> Les femmes ont toujours subi énormément d’inégalité au point de vue du travail , c’est pourquoi Rebecca Amsellem est une féministe qui reflète le passé, c’est grâce à des féministes comme elle que le salaire d’une femme devient équitable. Pour rappel avant 1907 les femmes ne pouvaient pas posséder librement leur salaire il devait avoir l’accord de leur époux.</p>
+        <p class="article__texte"> Même après plusieurs lois les époux persévéraient à contrôler l’argent de leur épouse. Ceci reflète complètement ce qui se passe de nos jours car depuis 1972 avoir un salaire inéquitable est strictement interdit pourtant cette loi n’a rien changé.</p>
+        <p class="article__texte"> Il est donc très dur de changer ce genre d’inégalité.  Il s’agit d’un combat sans fin pour Rebecca Amsellem car d’après les calculs qu’elles effectuent chaque an l’égalité salariale sera atteinte seulement en 2168</p>
+        <figure>
+            <img class="article__image" src="public/images/article2_image4.webp" alt="graphique représentant l'écart du salaire entre l'homme et la femme">
+            <figcaption class="article__legende">Graphique représentant l’écart de salaire entre l’homme et la femme</figcaption>
+        </figure>
+
+      </section>
+  
+      <section>
+        <div class="article__doublefleche">
+        <div class="article__precedfleche">
+          <h4 class="article__precedart">Article précédent</h4>
+          <a href="article1.html">
+            <img src="public/icones/fleche_precedent.svg" alt="flèche allant vers la gauche">
+          </a>
+        </div>
+        <div class="article__prochainfleche">
+          <h4 class="article__prochainart"> Prochain article </h4>
+          <a href="article3.html">
+            <img  src="public/icones/fleche_prochain.svg" alt="flèche allant vers la droite">
+          </a>
+        </div>
+        </div>
+      </section>
+      <section class="article__projet">
+        <h4 class="article__projetquest">Vous souhaitez en voir plus ? </h4>
+        <p class="article__projettexte">N’hésitez pas à regarder les autres articles proposé par d’autres éudiants.</p>
+        <a href="autres_projets.html">
+          <img class="article__projetimg" src="public/icones/photos_autres_projet.webp" alt="plusieurs photo illustrant le feminisme faisant référence aux autres projet de mes camarades">
+        </a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <img class="footer__design" src="public/icones/design_piedpage.svg" alt="">
+      <div class="footer__all">
+       
+        <div class="footer__info">
+          
+          <p class="footer__name">Bryan Ferry A2 </p>
+          
+          
+            
+        
+        
+            <a class="footer__adresse" href="mailto:bryan.ferry@edu.univ-fcomte.fr">
+              <img class="footer__logomail" src="public/icones/logo_mail.svg" alt="Logo mailto">
+            </a>
+            
+            
+          <div class="footer__contact">
+          <p class="footer__renseignement">Besoin de renseignement ? </p>
+
+          <div class="footer__besoininfo">
+            <a class="footer__buttoncontact" href="contact.html">CONTACT</a>
+            <a class="footer__apropos" href="a_propos.html">À PROPOS</a>
+          </div>
+          
+        </div>
+        <hr class="footer__separaison">
+          
+        </div>
+        
+        <div class="footer__mmi">
+          <img class="footer__logommi" src="public/icones/logo_mmi.svg" alt="logo du MMI de Montbéliard">
+
+          <p class="footer__mmiprojet">Projet réalisé dans le cadre d’un exercice <br>
+         pédagogique au département </p>
+      
+          <a class="footer__lienmmi" href="http://mmimontbeliard.com/">MMi de Montbéliard</a>
+          
+        </div>
+        <br> <br>
+      </div>
+
+    </footer>
+
+  </body>
+</html>

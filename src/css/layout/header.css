@@ -1,0 +1,39 @@
+header{
+    margin-bottom: 14vh;
+}
+
+
+.header__menu{
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+}
+
+.header__object {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    height: -100px;
+    width:1400px;
+    
+    
+    
+}
+
+.header__object2{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    height: -100px;
+    width:1400px;
+    margin-top: 5vh;
+}
+
+.header__fond {
+    height: 300px;
+    width: 100%;
+    position: absolute;
+    z-index: -4;
+    
+
+}

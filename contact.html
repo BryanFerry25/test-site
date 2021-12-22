@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr" x-data="{ menuIsOpen: false }" :class="menuIsOpen && 'noscroll'">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="site Féminisme & Humanité">
+
+    <title>Féminisme & Humanité</title>
+
+    <link rel="stylesheet" href="src/css/style.css">
+    <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+</head>
+<body>
+    <header class="header"
+    @scroll.window="atTop = ( window.scrollY > 100 ? false : true )"
+            :class="{ 'header--atTop' : !atTop }">
+
+      <div class="header__start">
+        <div class="header__object2">
+          <img src="public/icones/fleche_retour.svg" alt="retour" onclick="history.back()">
+          <a href="index.html">
+            <img src="public/icones/logo.svg" alt="logo">
+          </a>
+          <img class="header__fond" src="public/icones/accueil_design_entete.webp" alt="design en tete">
+
+          
+          
+              
+        <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+          @pointerdown="menuIsOpen = !menuIsOpen" 
+          :class="menuIsOpen && 'menu-btn--open'">
+        <span class="menu-btn__bar"></span>
+      </button>
+      
+
+        </div>
+        
+      </div> 
+      
+        <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+          <img class="menu__entete" src="public/icones/accueil_design_entete.webp" alt="">
+          <img class="menu__logo" src="public/icones/logo.svg" alt="logo">
+          <ul class="menu__list list-unstyled">
+            <li class="menu__item">
+              <a class="menu__link" href="article1.html">La puissance féminine</a></li>
+            <li class="menu__item">
+              <a class="menu__link" href="article2.html">Rebecca Amsellem, une lutte acharnée</a></li>
+            <li class="menu__item">
+              <a class="menu__link" href="article3.html">À quoi servent les femmes ?</a></li>
+            <li class="menu__item">
+              <a class="menu__link" href="galerie.html">Galerie</a></li>
+            <li class="menu__item">
+              <a class="menu__link" href="glossaire.html">Glossaire</a></li>
+              <hr class="menu__separaison1">
+            <li class="menu__item">
+              <a class="menu__link" href="a_propos.html">À Propos</a></li>
+              <hr class="menu__separaison2">
+            <li class="menu__item">
+              <a class="menu__link" href="#">Anglais</a></li>
+          </ul>
+        </nav>
+        
+      
+          
+      </header>
+      <main>
+          <h1>CONTACT</h1>
+          <img src="public/icones/enveloppe.svg" alt="enveloppe">
+          <section>
+              <h2>Une question ?</h2>
+              <p>Si vous avez la moindre question ou remarques éventuelles n’hésitez pas à me la faire parvenir en remplissant ce formulaire !</p>
+              <img src="public/icones/barre_design.svg" alt="design barre">
+              <div>
+                <form method="get">
+                    <label for="NameText">Nom</label>
+                    <input type="text" id="NameText" required>
+                    <br>
+    
+                    <label for="NameText1">Prénom</label>
+                    <input type="text" id="NameText1" required>
+                    <br>
+    
+                    <label for="NameText2">E-mail</label>
+                    <input type="text" id="NameText2" required>
+                    <br>
+
+                    <label for="NameText3">Message</label>
+                    <input type="text" id="NameText3" required>
+                    <br>
+
+                <input type="submit" value="Envoyer">
+                </form>
+              </div>
+
+          </section>
+          <section>
+              <h2>N’hésitez pas à me suivre sur les réseaux pour être au courant des nouveautés !</h2>
+              <img src="public/icones/instagram.svg" alt="logo instagram">
+              <img src="public/icones/linkedin.svg" alt="logo linkedin">
+              <img src="public/icones/facebook.svg" alt="logo facebook">
+          </section>
+
+      </main>
+      <footer class="footer">
+        <img class="footer__design" src="public/icones/design_piedpage.svg" alt="">
+        <div class="footer__all">
+         
+          <div class="footer__info">
+            
+            <p class="footer__name">Bryan Ferry A2 </p>
+            
+            
+              
+          
+          
+              <a class="footer__adresse" href="mailto:bryan.ferry@edu.univ-fcomte.fr">
+                <img class="footer__logomail" src="public/icones/logo_mail.svg" alt="Logo mailto">
+              </a>
+              
+              
+            <div class="footer__contact">
+            <p class="footer__renseignement">Besoin de renseignement ? </p>
+  
+            <div class="footer__besoininfo">
+              <a class="footer__buttoncontact" href="contact.html">CONTACT</a>
+              <a class="footer__apropos" href="a_propos.html">À PROPOS</a>
+            </div>
+            
+          </div>
+          <hr class="footer__separaison">
+            
+          </div>
+          
+          <div class="footer__mmi">
+            <img class="footer__logommi" src="public/icones/logo_mmi.svg" alt="logo du MMI de Montbéliard">
+  
+            <p class="footer__mmiprojet">Projet réalisé dans le cadre d’un exercice <br>
+           pédagogique au département </p>
+        
+            <a class="footer__lienmmi" href="http://mmimontbeliard.com/">MMi de Montbéliard</a>
+            
+          </div>
+          <br> <br>
+        </div>
+  
+      </footer>
+    
+</body>
+</html>

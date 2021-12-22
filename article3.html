@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr" x-data="{ menuIsOpen: false }" :class="menuIsOpen && 'noscroll'">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="site Féminisme & Humanité">
+
+    <title>Féminisme & Humanité</title>
+
+    <link rel="stylesheet" href="src/css/style.css">
+    <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+</head>
+<body>
+    <header class="header"
+    @scroll.window="atTop = ( window.scrollY > 100 ? false : true )"
+            :class="{ 'header--atTop' : !atTop }">
+
+      <div class="header__start">
+        <div class="header__object2">
+          <img src="public/icones/fleche_retour.svg" alt="retour" onclick="history.back()">
+          <a href="index.html">
+            <img src="public/icones/logo.svg" alt="logo">
+          </a>
+          <img class="header__fond" src="public/icones/accueil_design_entete.webp" alt="design en tete">
+
+          
+          
+              
+        <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+          @pointerdown="menuIsOpen = !menuIsOpen" 
+          :class="menuIsOpen && 'menu-btn--open'">
+        <span class="menu-btn__bar"></span>
+      </button>
+      
+
+        </div>
+        
+      </div> 
+      
+        <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+          <img class="menu__entete" src="public/icones/accueil_design_entete.webp" alt="">
+          <img class="menu__logo" src="public/icones/logo.svg" alt="logo">
+          <ul class="menu__list list-unstyled">
+            <li class="menu__item">
+              <a class="menu__link" href="article1.html">La puissance féminine</a></li>
+            <li class="menu__item">
+              <a class="menu__link" href="article2.html">Rebecca Amsellem, une lutte acharnée</a></li>
+            <li class="menu__item">
+              <a class="menu__link" href="article3.html">À quoi servent les femmes ?</a></li>
+            <li class="menu__item">
+              <a class="menu__link" href="galerie.html">Galerie</a></li>
+            <li class="menu__item">
+              <a class="menu__link" href="glossaire.html">Glossaire</a></li>
+              <hr class="menu__separaison1">
+            <li class="menu__item">
+              <a class="menu__link" href="a_propos.html">À Propos</a></li>
+              <hr class="menu__separaison2">
+            <li class="menu__item">
+              <a class="menu__link" href="#">Anglais</a></li>
+          </ul>
+        </nav>
+        
+      
+          
+      </header>
+
+    <main class="article">
+
+        
+
+    <section>
+      <h1 class="article__title">À quoi servent les femmes ?</h1>
+        <img class="article__imageintro" src="public/images/article3_intro.webp" alt="photo de femme travaillant dans une usine de couture">
+        <p class="article__intro">À quoi servent les femmes? C’est le nom d’un reportage réalisé sur Youtube par la société INA en 1964. </p>
+        <p class="article__intro">À cette époque on perçoit les femmes comme des êtres en dehors de notre société qui sont juste esclave de l’homme, avec comme seul et unique but, satisfaire l’homme. </p>
+        <p class="article__intro">La notion d’humanité devient donc inexistante car on ne met pas chaque genre au même niveau d’égalité, deux catégories se construisent dispersant les hommes des femmes. Ces deux catégories ne feront plus qu’un grâce à l’évolution de la société et surtout de la vision de la femme.</p>
+     </section>
+
+    <section>
+
+      <h2 class="article__subtitle"> Une infériorité marquante </h2>
+      <p class="article__texte">L’analyse que nous allons faire reprend différentes parties de la vidéo et donc différents témoignages. La première qualité qu’un homme citera de sa femme est qu’elle est bonne cuisinière, on pourrait croire qu’elle ne sert qu’à sa et pas aux autres tâches. Un autre homme rajoute qu’ils se réunissent au bar pour se reposer car la femme reste à la maison pour faire le ménage et que ce n’est pas le rôle de l’homme de faire ceci. Ici la vision de la femme se réduit à un objet qui fait juste les taches de
+        cuisine et de ménages, ce qui la réduit à une chose encombrante mais utile.</p>
+        
+      
+      <figure>
+        <img class="article__image" src="public/images/article3_image1.webp" alt="illustration montrant une femme dans une cuisine">
+        <figcaption class="article__legende">Dessin illustrant une femme dans la cuisine</figcaption>
+      </figure>
+
+        <p class="article__texte">Déjà ici on voit que des préjugés assez marquants sont présents pour les femmes. C’est pourquoi, le reporteur ajoute que pendant que les hommes se reposent des femmes, les femmes s’occupent des hommes. Cette phrase peut paraître assez marquante et elle réduit même la femme à un état d’esclave. En poursuivant sur ceci les femmes finissent souvent en larmes lorsque les hommes vont leur donner des ordres sèchement, car ils les considèrent comme moins que rien.</p>
+             
+    </section>
+
+    <section>
+
+        <h2 class="article__subtitle">   Une notion d’humanité inexistante </h2>
+        <p class="article__texte">Les hommes se considèrent comme la seule race d’humanité en pensant que les femmes sont justes accessoires à leur vie. La première chose marquante se déroule au début du reportage où on nous dit qu’entre hommes il ne parle pas de femmes.On pourrait croire qu’elles sont simplement là pour les aider mais qu’il n’est pas utile de parler d’eux.</p>
+        
+        <figure>
+            <img class="article__image" src="public/images/article3_image2.webp" alt="tableau de michel-ange illsutrant deux mains avec deux doigts tendu qui sont à quelques centimètres de se toucher">
+            <figcaption class="article__legende">Peinture de Michel-Ange sur le plafond de la chapelle Sixtine à Rome représentant la création de l’humanité et donc l’humanité en général</figcaption>
+        </figure>
+
+        <p class="article__texte">Par la suite le reporteur nous dit des termes assez marquants qui à l’époque était normal, comme le fait qu’elle travaille pour les hommes, qu’elles s’apprêtent pour eux, qu’elles travaillent dans ce qu’ils ont inventé etc. Ici on voit bien que la femme ne fait pas partie de la société pour les hommes, elle est juste là à leur disposition, pour les servirent.</p>
+      
+        <p class="article__texte">Vers la fin du reportage on nous dit même que le devoir principal d’une femme est d’être bel et bien maquillés, on la réduit presque à un objet qui est là pour faire plaisir aux hommes uniquement.</p>
+
+
+        <figure>
+          <img class="article__image" src="public/images/article3_image3.webp" alt="femme maquillé à fond avec faux cheveux">
+          <figcaption class="article__legende">Femme idéale pour un homme à l’époque à savoir maquillé partout sur le visage et qui reste à la maison dans la cuisine</figcaption>
+      </figure>
+      <p class="article__texte">Ensuite encore quelques hommes préfèrent donner des ordres aux hommes qu’aux femmes, ici il parle d’amour-propre masculin. C’est même pourquoi tous les hommes interrogés nous disent que les femmes doivent rester à la maison pour que lorsqu’ils rentrent à la maison tout sois prêts. Ici les hommes ne pensent qu’à eux et ignorent le bonheur de la femme, ils en oublient qu’elles ont également besoin d’être heureuse.</p>
+      </section>
+
+      <section>
+        <h2 class="article__subtitle"> De nos jours </h2>
+        
+        <p class="article__texte"> Notre époque actuelle a bien évolué en matière de préjugés et d’infériorité entre
+            hommes-femmes. Tout d’abord le taux de femmes à faire des études a énormément augmentées comparé à avant où elle savait qu’elle n’allait pas faire d’études pour pouvoir rester à la maison.</p>
+        <p class="article__texte"> Les femmes travaillent dans divers métiers variés alors qu’avant elle se limitait à être couturière ou infirmière, au niveau politique c’est pareil, au parlement le nombre de femmes est devenu deux fois plus conséquent qu’avant.</p>
+        <p class="article__texte"> Néanmoins quelques préjugés comme le fait que les femmes doivent rester à la cuisine persistent mais elle reste bien plus ironique qu’auparavant.</p>
+        <figure>
+            <img class="article__image" src="public/images/article3_image4.webp" alt="illustration representant une femme faisant toute les taches ménagères">
+            <figcaption class="article__legende">Illustration typique des préjugés que l’on peut avoir sur une femme à savoir qu’elle fait les tâches ménagères uniquement</figcaption>
+        </figure>
+        <div class="article__video">
+            <p> Vidéo :
+                <a class="article_videolien" href="https://youtu.be/BfW72FjVC6k">https://youtu.be/BfW72FjVC6k</a>
+            </p>
+        </div>
+
+        <div class="article__microtrot">
+            <p>Micro trottoir sur le Féminisme</p>
+            <p class="article__microvideo">VIDÉO</p>
+        </div>
+        
+
+      </section>
+  
+    </section>
+    <section class="article__precedfleche">
+      <h4 class="article__precedart"> Prochain article </h4>
+      <a href="article2.html">
+        <img  src="public/icones/fleche_precedent.svg" alt="flèche allant vers la droite">
+      </a>
+    </section>
+    <section class="article__projet">
+      <h4 class="article__projetquest">Vous souhaitez en voir plus ? </h4>
+      <p class="article__projettexte">N’hésitez pas à regarder les autres articles proposé par d’autres éudiants.</p>
+      <a href="autres_projets.html">
+        <img class="article__projetimg" src="public/icones/photos_autres_projet.webp" alt="plusieurs photo illustrant le feminisme faisant référence aux autres projet de mes camarades">
+      </a>
+    </section>
+
+    </main>
+
+    <footer class="footer">
+      <img class="footer__design" src="public/icones/design_piedpage.svg" alt="">
+      <div class="footer__all">
+       
+        <div class="footer__info">
+          
+          <p class="footer__name">Bryan Ferry A2 </p>
+          
+          
+            
+        
+        
+            <a class="footer__adresse" href="mailto:bryan.ferry@edu.univ-fcomte.fr">
+              <img class="footer__logomail" src="public/icones/logo_mail.svg" alt="Logo mailto">
+            </a>
+            
+            
+          <div class="footer__contact">
+          <p class="footer__renseignement">Besoin de renseignement ? </p>
+
+          <div class="footer__besoininfo">
+            <a class="footer__buttoncontact" href="contact.html">CONTACT</a>
+            <a class="footer__apropos" href="a_propos.html">À PROPOS</a>
+          </div>
+          
+        </div>
+        <hr class="footer__separaison">
+          
+        </div>
+        
+        <div class="footer__mmi">
+          <img class="footer__logommi" src="public/icones/logo_mmi.svg" alt="logo du MMI de Montbéliard">
+
+          <p class="footer__mmiprojet">Projet réalisé dans le cadre d’un exercice <br>
+         pédagogique au département </p>
+      
+          <a class="footer__lienmmi" href="http://mmimontbeliard.com/">MMi de Montbéliard</a>
+          
+        </div>
+        <br> <br>
+      </div>
+
+    </footer>
+
+  </body>
+</html>

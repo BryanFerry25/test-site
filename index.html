@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr" x-data="{ menuIsOpen: false }" :class="menuIsOpen && 'noscroll'">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="site Féminisme & Humanité">
+
+    <title>Féminisme & Humanité</title>
+
+    <link rel="stylesheet" href="src/css/style.css">
+    <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+</head>
+<body>
+
+  <header class="header">
+
+    <div class="header__start">
+      <div class="header__object">
+        <img src="public/icones/eclair.webp" alt="eclair">
+        <img src="public/icones/logo.svg" alt="logo">
+        <img class="header__fond" src="public/icones/accueil_design_entete.webp" alt="design en tete">
+
+        
+        
+            
+      <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+        @pointerdown="menuIsOpen = !menuIsOpen" 
+        :class="menuIsOpen && 'menu-btn--open'">
+      <span class="menu-btn__bar"></span>
+    </button>
+    
+
+      </div>
+      
+    </div> 
+    
+      <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+     
+        <ul class="menu__list list-unstyled">
+          <li class="menu__item">
+            <a class="menu__link" href="article1.html">La puissance féminine</a></li>
+          <li class="menu__item">
+            <a class="menu__link" href="article2.html">Rebecca Amsellem, une lutte acharnée</a></li>
+          <li class="menu__item">
+            <a class="menu__link" href="article3.html">À quoi servent les femmes ?</a></li>
+          <li class="menu__item">
+            <a class="menu__link" href="galerie.html">Galerie</a></li>
+          <li class="menu__item">
+            <a class="menu__link" href="glossaire.html">Glossaire</a></li>
+            <hr class="menu__separaison1">
+          <li class="menu__item">
+            <a class="menu__link" href="a_propos.html">À Propos</a></li>
+            <hr class="menu__separaison2">
+          <li class="menu__item">
+            <a class="menu__link" href="#">Anglais</a></li>
+        </ul>
+      </nav>
+      
+    
+        
+    </header>
+</header>
+      <section class="accueil">
+        <div class="accueil__afterstart">
+          
+          <h1 class="accueil__tagline">Vous connaissez l'égalité? Elles non plus...</h1>
+          <img class="accueil__imgintro" src="public/images/accueil_intro.webp" alt="femme dans une cuisine">
+        </div>
+
+          <div class="accueil__intro">
+            <h2 class="accueil__pourcentage">16,4%</h2>
+            <p class="accueil__explicpourc">C’est l’écart de salaire entre les hommes et les femmes en 2013 dans l’Union européennes.</p>
+          
+
+          
+              <p class="accueil__accroche">Des inégalités comme celle-ci ne sont malheureusement pas dévoilées en grand public... On vous invite donc à découvrir les évènements marquant du féminisme à travers 3 de nos articles.</p>
+              <p class="accueil__bonnevisite">Bonne visite !</p>
+            <div class="accueil__videoytb" >
+                <a href="https://youtu.be/BfW72FjVC6k">
+                  <img class="accueil__visuel" src="public/images/visuel_video.webp" alt="visuel de la vidéo a quoi servent les femmes">
+                </a>
+            </div>
+              
+              
+          </div>
+      </section>
+      <section  class="introart">
+        <img class="introart__separaisong" src="public/icones/barre_accueil_gauche.webp" alt="design de barre pour séparer les articles">
+
+        <div class="introart__article1">
+          <h2 class="introart__titre1">La puissance féminine</h2>
+          <img class="introart__img1" src="public/images/accueil_article1.webp" alt="article 1 accueil">
+          <p class="introart__tweet1">Si on vous dit féminisme pensez-vous à la guerre ? Pourtant elle a inversé les rôles des hommes avec les femmes en rétablissant l’égalité.</p>
+          <a href="article1.html"><img  class="introart__suite"src="public/icones/lire_la_suite.webp" alt="bouton avec marqué lire la suite"></a>
+        </div>
+
+        <img class="introart__separaisond" src="public/icones/barre_accueil_droite.webp" alt="design de barre pour séparer les articles">
+
+        <div class="introart__article2">
+          <h2 class="introart__titre2">Rebecca Amsellem, une lutte acharnée</h2>
+          <img class="introart__img2" src="public/images/accueil_article2.webp" alt="article 2 accueil">
+          <p class="introart__tweet2">Vous vous doutez sûrement des inégalités salariales, mais saviez-vous qu’elles représentent 2 mois de travail gratuit par an pour une femme.</p>
+          <a href="article2.html"><img  class="introart__suite"src="public/icones/lire_la_suite.webp" alt="bouton avec marqué lire la suite"></a>
+        </div>
+
+        <img  class="introart__separaisong"src="public/icones/barre_accueil_gauche.webp" alt="design de barre pour séparer les articles">
+
+        <div class="introart__article3">
+          <h2 class="introart__titre3"> À quoi servent les femmes ?</h2>
+          <img  class="introart__img3"src="public/images/accueil_article3.webp" alt="article 3 accueil">
+          <p class="introart__tweet3">La femme n’est bonne qu’à faire la cuisine et le ménage, elle ne sert qu’à ça . Cette phrase était malheureusement ordinaire en 1960.</p>
+          <a href="article3.html"><img  class="introart__suite"src="public/icones/lire_la_suite.webp" alt="bouton avec marqué lire la suite"></a>
+        </div>
+        
+
+
+      </section>
+      <footer class="footer">
+        <img class="footer__design" src="public/icones/design_piedpage.svg" alt="">
+        <div class="footer__all">
+         
+          <div class="footer__info">
+            
+            <p class="footer__name">Bryan Ferry A2 </p>
+            
+            
+              
+          
+          
+              <a class="footer__adresse" href="mailto:bryan.ferry@edu.univ-fcomte.fr">
+                <img class="footer__logomail" src="public/icones/logo_mail.svg" alt="Logo mailto">
+              </a>
+              
+              
+            <div class="footer__contact">
+            <p class="footer__renseignement">Besoin de renseignement ? </p>
+  
+            <div class="footer__besoininfo">
+              <a class="footer__buttoncontact" href="contact.html">CONTACT</a>
+              <a class="footer__apropos" href="a_propos.html">À PROPOS</a>
+            </div>
+            
+          </div>
+          <hr class="footer__separaison">
+            
+          </div>
+          
+          <div class="footer__mmi">
+            <img class="footer__logommi" src="public/icones/logo_mmi.svg" alt="logo du MMI de Montbéliard">
+  
+            <p class="footer__mmiprojet">Projet réalisé dans le cadre d’un exercice <br>
+           pédagogique au département </p>
+        
+            <a class="footer__lienmmi" href="http://mmimontbeliard.com/">MMi de Montbéliard</a>
+            
+          </div>
+          <br> <br>
+        </div>
+  
+      </footer>
+      
+    
+    
+</body>
+</html>

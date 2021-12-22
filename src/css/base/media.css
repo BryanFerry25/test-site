@@ -1,0 +1,16 @@
+*{
+    max-width: 100%;
+    height : auto;
+    box-sizing:border-box;
+}
+
+figure {
+    margin: 0;
+
+}
+
+figcaption {
+
+    font-size: var(--text-sm);
+    color: var(--gray-600);
+}
