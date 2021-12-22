@@ -1,39 +1,37 @@
-header{
-    margin-bottom: 14vh;
-}
-
-
-.header__menu{
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-}
-
-.header__object {
-    display: flex;
-    justify-content:space-around;
-    align-items: center;
-    height: -100px;
-    width:1400px;
-    
-    
-    
-}
-
-.header__object2{
-    display: flex;
-    justify-content:space-around;
-    align-items: center;
-    height: -100px;
-    width:1400px;
-    margin-top: 5vh;
-}
-
-.header__fond {
-    height: 300px;
+/* La position "fixed" permet à l'élément d'être toujours présent à l'écran, ici en haut à gauche et couvre toute la largeur de l'écran.
+Flex sert à positionner les éléments de l'en-tête (header__start et header__end) l'un à coté de l'autre alors que la valeur "space-between" de "justify-content" permet des les répartir de part et d'autre de l'écran (l'un à gauche, l'autre à droite)
+*/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    position: absolute;
-    z-index: -4;
-    
-
-}
+    z-index: 2;
+    padding: var(--space2x) var(--space3x);
+    display: flex;
+    justify-content: space-between;
+    transition: all .3s ease-in-out;
+  }
+  
+  .header--atTop {
+    background-color: var(--gray-white);
+  }
+  
+  .header__end {
+    display: flex;
+    gap: var(--space2x);
+  }
+  
+  .header__search {
+    width: 40px;
+    filter: invert();
+  }
+  
+  /* On annule le filtre d'inversion des couleurs lorsqu'on commence à scroller dans la page et que l'en-tête devient blanc */
+  .header--atTop .header__search {
+    filter: none;
+  }
+  
+  .header__logo {
+    display: block;
+  }
