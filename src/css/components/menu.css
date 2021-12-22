@@ -1,7 +1,8 @@
 
 
 .menu {
-  
+  max-width: auto;
+  height: auto;
   visibility: hidden;
   opacity: 0;
   overflow: hidden;
