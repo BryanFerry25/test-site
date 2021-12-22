@@ -3,7 +3,6 @@ Flex sert à positionner les éléments de l'en-tête (header__start et header__
 */
 .header {
   position: fixed;
-  background-color: maroon;
   top: 0;
   left: 0;
   width: 100%;
@@ -14,13 +13,25 @@ Flex sert à positionner les éléments de l'en-tête (header__start et header__
   transition: all .3s ease-in-out;
 }
 
-
+.header--atTop {
+  background-color: var(--gray-white);
+}
 
 .header__end {
   display: flex;
   gap: var(--space2x);
 }
 
+.header__search {
+  width: 40px;
+  filter: invert();
+}
 
+/* On annule le filtre d'inversion des couleurs lorsqu'on commence à scroller dans la page et que l'en-tête devient blanc */
+.header--atTop .header__search {
+  filter: none;
+}
 
-
+.header__logo {
+  display: block;
+}
