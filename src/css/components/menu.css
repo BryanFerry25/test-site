@@ -18,8 +18,8 @@
 
 
 .menu__entete {
-  height: 300px;
-  width: 100%;
+  
+ 
   margin-top: 0;
   z-index: -4;
   margin-bottom: 88vh;
@@ -28,7 +28,7 @@
 
 .menu__logo{
   height: 100px;
-  width: 100%;
+  
   position: absolute;
   z-index: -4;
   margin-bottom: 85vh;
@@ -78,7 +78,7 @@ nav{
     content: '';
     background: green;
     height: 4px;
-    width: 120%;
+    width: 100%;
     position: absolute;
     left: 0;
     z-index: 10;
