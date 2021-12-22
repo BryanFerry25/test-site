@@ -1,7 +1,7 @@
-/* Pour construire le menu en mobile : 
-On construit le menu tel qu'il sera une fois ouvert.
-On ajoute les propriétés "visibility: hidden" et "opacity: 0" pour masquer le menu. */
+
+
 .menu {
+  
   visibility: hidden;
   opacity: 0;
   overflow: hidden;
@@ -10,83 +10,131 @@ On ajoute les propriétés "visibility: hidden" et "opacity: 0" pour masquer le 
   position: fixed;
   top: 0; bottom: 0;
   left: 0; right : 0;
-  background-color: var(--brand-violet);
-  font-size: var(--text-xl);
-  letter-spacing: var(--letter-spacing);
+  background-color: var(--clair-beige);
+  font-size: 16px;
+  
   transition: all .4s ease-in-out;
-}
-/* On se sert de Javascript pour ajouter une classe sur le menu lorsqu'on clique sur le bouton de menu pour le faire apparaître */
-.menu--open {
-  visibility: visible;
-  opacity: 1;
-}
-
-/* Mise en forme des éléments du menu */
-.menu__list {
-  margin-top: 25vh;
-  margin-left: 15vw;
-}
-
-.menu__item {
-  margin-top: 15%;
-}
-
-.menu__link {
-  color: var(--gray-white);
-  text-decoration: none;
-}
-
-
-/* Mise en forme du bouton de menu "Hamburger" */
-.menu-btn {
-  position: relative;
-  z-index: 3;
-  width: 30px;  
-}
-
-.menu-btn__bar,
-.menu-btn__bar::before,
-.menu-btn__bar::after {
-  content: '';
-  background: var(--gray-white);
-  height: 3px;
-  width: 120%;
-  position: absolute;
-  left: 0;
-  z-index: 10;
-  transition: all .4s ease-in-out;
-  border-radius: 5px;
-}
-
-.menu-btn__bar::before {
-  width: 60%;
-  left: 15px;
-  top:-10px;
-  border-radius: 5px;
-}
-
-.menu-btn__bar::after {
-  width: 60%;
-  right:10px;
-
-  top: 10px;
-  border-radius: 5px;
-}
-
-/* Technique pour transformer les 3 barres du bouton de menu en croix
-Ne pas oublier d'ajouter une transition plus haut pour l'animation */
-.menu-btn--open .menu-btn__bar,
-.menu-btn--open .menu-btn__bar::before,
-.menu-btn--open .menu-btn__bar::after {
-  transform: rotate(135deg);
-}
-
-.menu-btn--open .menu-btn__bar::before,
-.menu-btn--open .menu-btn__bar::after {
-  transform: rotate(90deg);
-  left: 0px;
-  top:0px;
-  width: 100%;
   
 }
 
+
+.menu__entete {
+  height: 300px;
+  width: 100%;
+  margin-top: 0;
+  z-index: -4;
+  margin-bottom: 88vh;
+  position: absolute;
+}
+
+.menu__logo{
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  z-index: -4;
+  margin-bottom: 85vh;
+  
+}
+
+
+.menu--open {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.menu__item{
+    
+    text-align: center;
+    font-size: 1.02rem;
+    margin-top: 13%;
+}
+
+.menu__list{
+    margin: 25vh 8vh 9vh 15vw;
+
+}
+nav{
+    
+    font-family: var(--font-cinzel);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+}
+
+
+.menu-btn {
+    position: relative;
+    z-index: 5;
+    width: 40px;  
+    
+  }
+  
+  .menu-btn__bar,
+  .menu-btn__bar::before,
+  .menu-btn__bar::after {
+    
+    content: '';
+    background: var(--foncé-marron2);
+    height: 4px;
+    width: 120%;
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    border-radius: 4px;
+    transition: all .4s ease-in-out;
+    
+    
+  }
+  
+  .menu-btn__bar::before {
+    
+    width: 60%; 
+    left:15px;
+    top: -10px;
+    border-radius: 6px; 
+  }
+  
+  .menu-btn__bar::after {
+    width: 60%;
+    right:10px;
+    top: 10px;
+    border-radius: 6px;
+  }
+  
+  /* Technique pour transformer les 3 barres du bouton de menu en croix
+  Ne pas oublier d'ajouter une transition plus haut pour l'animation */
+  .menu-btn--open .menu-btn__bar,
+  .menu-btn--open .menu-btn__bar::before,
+  .menu-btn--open .menu-btn__bar::after {
+
+    transform: rotate(135deg);
+  }
+  
+  .menu-btn--open .menu-btn__bar::before,
+  .menu-btn--open .menu-btn__bar::after {
+    transform: rotate(90deg);
+    left:0px;
+    top: 0;
+    width:100%
+  }
+
+  .menu__separaison1{
+    height: 1px;
+    color:var(--foncé-marron2);
+    width:60%;
+    background-color: var(--foncé-marron2);
+    border-radius: 5px;
+  }
+
+.menu__separaison2{
+  height: 1px;
+  color:var(--foncé-marron2);
+  width:95%;
+  background-color: var(--foncé-marron2);
+  border-radius: 5px;
+}
+  
+  
