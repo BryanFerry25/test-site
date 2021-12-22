@@ -1,8 +1,6 @@
 
 
 .menu {
-  max-width: 450px;
-  max-height: 900px;
   visibility: hidden;
   opacity: 0;
   overflow: hidden;
